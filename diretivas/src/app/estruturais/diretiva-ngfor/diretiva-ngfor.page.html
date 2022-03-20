@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Diretiva *ngFor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h3>Exemplo 1 - *ngFor padrão</h3>
+
+  <ion-card *ngFor="let item of cursos" color="primary">
+    <ion-card-header>
+      <ion-card-title>{{item}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <strong>
+        {{item}}
+      </strong>
+    </ion-card-content>
+  </ion-card>
+
+
+  <h3>Exemplo 2 - *ngFor com a propriedade index</h3>
+
+  <ion-card *ngFor="let item of cursos; let i=index" color="primary">
+    <ion-card-header>
+      <ion-card-title>{{item}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <strong>
+        {{item}} está na posição {{i}} do array cursos
+      </strong>
+    </ion-card-content>
+  </ion-card>
+  
+  <h3>Exemplo 3 - *ngFor com a propriedade last</h3>
+
+  <ion-card *ngFor="let item of cursos; let ehUltimo=last" color="primary">
+    <ion-card-header>
+      <ion-card-title>{{item}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <strong>
+        {{item}} é o último? {{ehUltimo}}
+      </strong>
+    </ion-card-content>
+  </ion-card>
+
+
+  <h3>Exemplo 4 - *ngFor com a propriedade even</h3>
+
+  <ion-card *ngFor="let item of cursos; let ehPar=even" color="primary">
+    <ion-card-header>
+      <ion-card-title>{{item}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <strong>
+        {{item}} é par? {{ehPar}}
+      </strong>
+    </ion-card-content>
+  </ion-card>
+
+
+  <h3>Exemplo 5 - *ngFor com a propriedade odd</h3>
+
+  <ion-card *ngFor="let item of cursos; let ehImpar=odd" color="primary">
+    <ion-card-header>
+      <ion-card-title>{{item}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <strong>
+        {{item}} é ímpar? {{ehImpar}}
+      </strong>
+    </ion-card-content>
+  </ion-card>
+
+
+  <h3>Exemplo 6 - *ngFor com a propriedade odd usada para definir o estilo dos elementos</h3>
+
+  <ion-card [color]="(ehImpar)? 'primary': 'danger'" *ngFor="let item of cursos; let ehImpar=odd">
+    <ion-card-header>
+      <ion-card-title>{{item}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <strong>
+        {{item}}
+      </strong>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

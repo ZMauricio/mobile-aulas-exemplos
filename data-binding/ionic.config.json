@@ -1,0 +1,7 @@
+{
+  "name": "data-binding",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

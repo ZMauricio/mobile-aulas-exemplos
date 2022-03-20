@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Diretiva *ngClass</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h3>Exemplo 1 - Uso de class binding com uma tag div</h3>
+
+  <div [class.cor-fundo]="true">
+    Uma div com a cor de fundo alterada via CSS e class binding
+  </div>
+
+  <h3>Exemplo 2 - Uso de class binding com o componente ion-item</h3>
+
+  <ion-item [class.item-cor-fundo]="aplicar">
+    Item com cor de fundo alterada via CSS e class binding
+  </ion-item>
+
+  
+  <ion-button (click)="aplicarClasse()" expand="block" shape="round">
+    Aplicar
+  </ion-button>
+
+
+  <h3>Exemplo 3 - Uso padrão da diretiva *ngClass</h3>
+  
+  <ion-item [ngClass]="{'item-cor-fundo': true, 'item-cor-borda': true, 'alinhamento-texto': true, 'estilo-letra': true}">
+    Item com cor de fundo alterada via CSS e *ngClass
+  </ion-item>
+
+
+
+  <h3>Exemplo 4 - Uso padrão da diretiva *ngClass combinada com um método</h3>
+
+  <ion-item  [ngClass]="definirClasses()">
+    Diretiva *ngClass combinada com um método
+  </ion-item>
+
+</ion-content>

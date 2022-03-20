@@ -1,0 +1,25 @@
+.cor-fundo {
+    background-color: red;
+}
+
+
+.item-cor-fundo {
+    --ion-background-color: #da0f9d !important;
+}
+
+.item-cor-borda {
+    --ion-border-color: #1909f5 !important;
+    --border-width: 10px !important;
+}
+
+.alinhamento-texto {
+    text-align: center;
+}
+
+.estilo-letra {
+    font-style: italic;
+}
+
+.borda {
+    border: 3px solid yellow;
+}

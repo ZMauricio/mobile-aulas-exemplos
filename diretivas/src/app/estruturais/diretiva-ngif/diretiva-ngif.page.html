@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Diretiva *ngIf</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngIf="exibir" color="primary">
+    <ion-card-header>
+      <ion-card-title>Card Um</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      ngIf
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="!exibir" color="danger">
+    <ion-card-header>
+      <ion-card-title>Card Dois</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      ngIf
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="block" color="primary" (click)="mudar()">Mudar</ion-button>
+
+</ion-content>

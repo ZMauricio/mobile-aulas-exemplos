@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Diretiva *ngStyle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  
+  
+  <h3>Exemplo 1 - Uso padrão do *ngStyle em uma tag p</h3>
+
+  <p [ngStyle]="{'font-size': '30px'}">
+    valor fixo na tela
+  </p>
+
+
+  <h3>Exemplo 2 - Uso do *ngStyle combinado com um atributo da classe do componente</h3>
+
+  <ion-item>
+    <ion-label class="ion-text-wrap" [ngStyle]="{'font-size': valorFonte}">
+      Método da classe componente sendo referenciado no template (fonte aumenta)
+   </ion-label>
+  </ion-item>
+  
+  <ion-button (click)="incrementar()">Maior</ion-button>
+  <ion-button (click)="decrementar()">Menor</ion-button>
+
+
+  <h3>Exemplo 3 - Uso do *ngStyle combinado com atributos da classe do componente</h3>
+
+  <ion-item>
+    <ion-label class="ion-text-wrap" [ngStyle]="{'font-size': (defineTamanhoFonte)? 'x-large': 'smaller', 'color': (defineCorFonte)? 'red' : 'blue'}">
+      Altera o tamanho ou a cor fonte usando operador ternário
+    </ion-label>
+  </ion-item>
+    
+  <ion-button (click)="mudarTamanhoFonte()">mudarFonte</ion-button>
+  <ion-button (click)="mudarCorFonte()">mudarCor</ion-button>
+
+
+  <h3>Exemplo 4 - Uso padrão do style binding</h3>
+
+  <ion-item>
+    <ion-label class="ion-text-wrap" [style.font-size]="'30px'">
+      valor fixo na tela
+    </ion-label>
+  </ion-item>
+
+
+  <h3>Exemplo 5 - Uso de style binding combinado com um atributo da classe do componente</h3>
+
+  <ion-item>
+    <ion-label class="ion-text-wrap" [style.font-size]="valorFonte">
+      Método da classe componente sendo referenciado no template (fonte aumenta)
+    </ion-label>
+  </ion-item>
+
+  <ion-button (click)="incrementar()">Maior</ion-button>
+
+</ion-content>

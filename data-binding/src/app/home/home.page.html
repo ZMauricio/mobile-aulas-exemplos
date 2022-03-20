@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-button [routerLink]="['/interpolation']" expand="block" shape="round">
+    Interpolation
+  </ion-button>
+
+  <ion-button [routerLink]="['/property-binding']" expand="block" shape="round">
+    Property binding
+  </ion-button>
+
+  <ion-button [routerLink]="['/event-binding']" expand="block" shape="round">
+    Event binding
+  </ion-button>
+
+  <ion-button [routerLink]="['/two-way-binding']" expand="block" shape="round">
+    Two-way data binding
+  </ion-button>
+
+
+</ion-content>
